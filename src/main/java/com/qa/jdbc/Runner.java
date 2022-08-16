@@ -53,23 +53,23 @@ public class Runner {
 			// UPDATE
 			if (request.contains("u")) {
 				System.out.println("--Update Request: Enter ID of The Record You Wish To Replace--");
-				Integer updateid = scan.nextInt();
+				Integer updateId = scan.nextInt();
 				scan.nextLine();
 				System.out.println("-------------------Enter Updated First Name-------------------");
-				String updatefirstname = scan.nextLine();
+				String updateFirstName = scan.nextLine();
 				System.out.println("-------------------Enter Updated Last Name-------------------");
-				String updatelastname = scan.nextLine();
+				String updateLastName = scan.nextLine();
 				System.out.println("-------------------Enter Email-------------------");
-				String updateemail = scan.nextLine();
-				Customer updatecus = new Customer(updateid, updatefirstname, updatelastname, updateemail);
-				System.out.println(myJDBC.update(updatecus));
+				String updateEmail = scan.nextLine();
+				Customer updateCus = new Customer(updateId, updateFirstName, updateLastName, updateEmail);
+				System.out.println(myJDBC.update(updateCus));
 			}
 
 			// DELETE
 			if (request.contains("d")) {
 				System.out.println("--Delete Request: Enter ID of The Record You Wish To Delete--");
-				Integer deleteid = scan.nextInt();
-				myJDBC.delete(deleteid);
+				Integer deleteId = scan.nextInt();
+				myJDBC.delete(deleteId);
 			}
 
 			// EXIT
@@ -90,7 +90,7 @@ public class Runner {
 		// UPDATE
 		// Customer janeupdate = new Customer(8, "Jane", "Does", "janedoes@gmail.com");
 		// System.out.println(myJDBC.update(janeupdate));
-//		System.out.println(myJDBC.updatePrepared(janeupdate));
+		// System.out.println(myJDBC.updatePrepared(janeupdate));
 
 		// DELETE - Deletes row at index value
 		// myJDBC.delete(7);
